@@ -1,168 +1,159 @@
-Kickstart2 is a full-stack web application boilerplate built with **Node.js** and **Next.js**. It provides a structured and scalable architecture to kickstart web development with best practices in backend API handling and frontend rendering.
-
-## 🌟 Features
-- **Next.js for frontend rendering** (Server-side Rendering & Static Site Generation)
-- **Express.js-based API routes** for a robust backend
-- **Modular and scalable architecture** for maintainability
-- **Built-in middleware and utilities** for authentication and logging
-- **Pre-configured package dependencies** for fast setup
-- **Environment-based configurations** for flexibility
+After reviewing your **fullstack-next-node** repository, here's a comprehensive `README.md` tailored to your project's structure and features.
 
 ---
+
+# Kickstart2 🚀
+
+Kickstart2 is a full-stack web application boilerplate built with **Node.js** and **Next.js**, designed for rapid development and deployment. It offers a structured backend with API routes, middleware, and an optimized frontend framework.
+
+## 🌟 Features
+
+- **Next.js Frontend**: Server-side rendering and static site generation.
+- **Express.js Backend**: Robust API routes and middleware.
+- **Ethereum Integration**: Smart contracts using Solidity.
+- **Modular Architecture**: Organized for scalability and maintainability.
+- **Pre-configured Dependencies**: Fast setup with essential packages.
+
+## 📂 Project Structure
+
+```
+fullstack-next-node/
+│── .gitignore
+│── LICENSE
+│── README.md
+│── package.json
+│── package-lock.json
+│── server.js                 # Main backend server
+│── routes.js                 # API route definitions
+│── /components               # Reusable React components
+│── /ethereum                 # Blockchain integration
+│   │── compile.js            # Solidity compiler script
+│   │── deploy.js             # Deployment script
+│   │── web3.js               # Web3.js setup
+│   │── /build                # Compiled contract artifacts
+│   │── /contracts            # Solidity contracts
+│       │── Campaign.sol      # Campaign contract
+│── /pages                    # Next.js pages
+│── /public                   # Static assets
+│── /test                     # Test cases
+```
 
 ## ⚡ Quick Start
 
-### 📌 Prerequisites
-Make sure you have the following installed:
-- **[Node.js](https://nodejs.org/) (>= 16.x)**
-- **npm** (or use `yarn` as an alternative)
+### 📋 Prerequisites
 
-### 🚀 Installation
+- **Node.js** (>= 14.x)
+- **npm** or **yarn**
+- **MetaMask** (for Ethereum interactions)
+- **Infura** or **Alchemy** account (for Ethereum network access)
+
+### 🛠 Installation
+
 1. **Clone the repository**:
-   ```sh
-   git clone https://github.com/yourusername/kickstart2.git
-   cd kickstart2
+   ```bash
+   git clone https://github.com/hosseinsh91/fullstack-next-node.git
+   cd fullstack-next-node
    ```
 
 2. **Install dependencies**:
-   ```sh
+   ```bash
    npm install
    ```
    or
-   ```sh
+   ```bash
    yarn install
    ```
 
-3. **Start the development server**:
-   ```sh
+3. **Compile Smart Contracts**:
+   ```bash
+   node ethereum/compile.js
+   ```
+
+4. **Deploy Smart Contracts**:
+   ```bash
+   node ethereum/deploy.js
+   ```
+
+5. **Start the development server**:
+   ```bash
    npm run dev
    ```
    or
-   ```sh
+   ```bash
    yarn dev
    ```
 
-4. **Access the application**:
-   Open your browser and navigate to:
-   ```
-   http://localhost:3000
-   ```
-
----
-
-## 📂 Project Structure
-```
-kickstart2/
-│── .gitignore
-│── package.json
-│── package-lock.json
-│── server.js                 # Main entry point for the backend
-│── routes.js                 # Defines API routes
-│── /public                   # Static assets
-│── /pages                    # Next.js pages (frontend)
-│── /components               # Reusable React components
-│── /styles                   # CSS or Tailwind styles
-│── /utils                    # Helper functions
-│── /middleware               # Middleware (e.g., auth, logging)
-│── /api                      # API endpoints (backend logic)
-│── /config                   # Configuration settings
-│── README.md                 # Documentation
-│── LICENSE                   # License file
-│── .next/                    # Next.js build output (ignored in Git)
-```
-
----
+6. **Access the application**:
+   Open your browser and navigate to `http://localhost:3000`.
 
 ## 🔗 API Endpoints
 
-| Method | Endpoint         | Description                     |
-|--------|-----------------|---------------------------------|
-| GET    | `/api/status`    | Returns API status             |
-| POST   | `/api/user`      | Creates a new user             |
-| GET    | `/api/users`     | Retrieves list of users        |
-| PUT    | `/api/user/:id`  | Updates user details           |
-| DELETE | `/api/user/:id`  | Deletes a user                 |
+| Method | Endpoint           | Description                |
+|--------|--------------------|----------------------------|
+| GET    | `/api/status`      | Returns API status         |
+| POST   | `/api/campaign`    | Creates a new campaign     |
+| GET    | `/api/campaigns`   | Retrieves all campaigns    |
+| GET    | `/api/campaign/:id`| Retrieves a specific campaign |
 
----
+## 🛡 Environment Variables
 
-## 🛠 Environment Variables
-Before running the project, configure the environment variables in a `.env` file:
+Create a `.env` file in the root directory and add the following:
 
-```sh
+```
 PORT=3000
-MONGO_URI=mongodb://localhost:27017/kickstart2
-JWT_SECRET=your_secret_key
+INFURA_API_KEY=your_infura_api_key
+MNEMONIC=your_mnemonic
 ```
 
----
-
 ## 🏗 Deployment
-### 📍 **Deploy to Vercel**
-1. Install Vercel CLI:
-   ```sh
+
+### Vercel
+
+1. **Install Vercel CLI**:
+   ```bash
    npm install -g vercel
    ```
-2. Deploy the project:
-   ```sh
+
+2. **Deploy**:
+   ```bash
    vercel
    ```
 
-### 📍 **Deploy to Heroku**
-1. Login to Heroku:
-   ```sh
+### Heroku
+
+1. **Login to Heroku**:
+   ```bash
    heroku login
    ```
-2. Create a new Heroku app:
-   ```sh
-   heroku create kickstart2-app
+
+2. **Create a new app**:
+   ```bash
+   heroku create
    ```
-3. Deploy using Git:
-   ```sh
+
+3. **Deploy**:
+   ```bash
    git push heroku main
    ```
-4. Open the app:
-   ```sh
-   heroku open
-   ```
 
----
+## 🧪 Testing
 
-## 👥 Contribution
-Contributions are welcome! To contribute:
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature-branch`
-3. Commit your changes: `git commit -m "Add new feature"`
-4. Push to the branch: `git push origin feature-branch`
-5. Submit a Pull Request.
+Run tests using:
 
----
-
-## 📜 License
-This project is licensed under the **MIT License**.
-
----
-
-## 📧 Contact
-For questions or issues, feel free to reach out:
-- 📩 Email: yourname@example.com
-- 🐦 Twitter: [@yourhandle](https://twitter.com/yourhandle)
-- 💼 LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-
----
-
-🚀 **Happy Coding!**
+```bash
+npm test
+```
+or
+```bash
+yarn test
 ```
 
----
+## 🤝 Contribution
 
-### 🔥 **What's Included in the README?**
-- **Project Overview**
-- **Quick Installation Steps**
-- **Project Structure**
-- **API Endpoints**
-- **Environment Variables**
-- **Deployment Steps (Vercel & Heroku)**
-- **Contribution Guidelines**
-- **License & Contact Information**
+Contributions are welcome! Please fork the repository and create a pull request.
 
-This `README.md` ensures a professional GitHub repository presentation. Let me know if you need modifications! 🚀
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+
