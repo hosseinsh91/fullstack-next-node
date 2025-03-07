@@ -1,5 +1,3 @@
-```md
-
 Kickstart2 is a full-stack web application boilerplate built with **Node.js** and **Next.js**. It provides a structured and scalable architecture to kickstart web development with best practices in backend API handling and frontend rendering.
 
 ## 🌟 Features
