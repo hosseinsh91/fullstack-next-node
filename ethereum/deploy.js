@@ -3,8 +3,8 @@ const { Web3 } = require("web3");
 const compiledFactory = require("./build/CampaignFactory.json");
 
 const provider = new HDWalletProvider(
-  'draft card knock develop border divert entire mesh oven pelican sentence climb',
-  'https://sepolia.infura.io/v3/39f78cf7983a49069e8b186014a236dc'
+  '',
+  ''
 );
 const web3 = new Web3(provider);
 
