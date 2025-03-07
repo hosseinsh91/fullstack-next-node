@@ -1,8 +1,4 @@
-After reviewing your **fullstack-next-node** repository, here's a comprehensive `README.md` tailored to your project's structure and features.
-
----
-
-# Kickstart2 🚀
+# Kickstart🚀
 
 Kickstart2 is a full-stack web application boilerplate built with **Node.js** and **Next.js**, designed for rapid development and deployment. It offers a structured backend with API routes, middleware, and an optimized frontend framework.
 
